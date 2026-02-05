@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>관계인식</title>
+<title>관계영역</title>
 
 <style>
 body{
@@ -16,12 +16,55 @@ body{
 }
 
 .card{
-  width:min(90vw, 360px);
-  height:min(90vh, 420px);
+  position: relative;
+  width: min(90vw, 360px);
+  height: min(90vh, 420px);
   background:#fff;
   border-radius:22px;
-  padding:20px;
+  overflow:hidden;
   box-shadow:0 16px 36px rgba(0,0,0,.16);
-  transform:rotate(-8deg);
-  transition
+  transform: rotate(-6deg);
+  transition: transform .25s ease;
+}
 
+.card:hover{
+  transform: rotate(0deg) scale(1.04);
+}
+
+/* ✅ 타이틀 오버레이 */
+.title{
+  position:absolute;
+  top:12px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:8px 14px;
+  border-radius:999px;
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  font-weight:800;
+  font-size:16px;
+  z-index:2;
+}
+
+.media{
+  width:100%;
+  height:100%;
+}
+
+.media img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+</style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="title">자기인식</div>
+    <div class="media">
+      <img src="images/self.jpg" alt="자기인식">
+    </div>
+  </div>
+</body>
+</html>
